@@ -6,7 +6,7 @@
 we eventually shouldn't need this because all of our production functions should be rolled up into
 modules.
 #>
-$FunctionsPath = "$Repo\Production\Functions"
+$FunctionsPath = "$Repo\Functions"
 $Functions = Get-ChildItem $FunctionsPath -Recurse | Select-Object -ExpandProperty FullName | Where-Object {$_ -like "*.ps1"}
 ForEach ($Function in $Functions) {
     $Content = Get-Content $Function
@@ -24,7 +24,7 @@ ForEach ($Function in $Functions) {
 }
 
 # Get list of production Modules in the repo and import them
-$ModulesPath = "$Repo\Production\Modules"
+$ModulesPath = "$Repo\Modules"
 $Modules = Get-ChildItem $ModulesPath
 ForEach ($Module in $Modules) {
     $Name = $Module.Name

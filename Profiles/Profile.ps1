@@ -1,7 +1,7 @@
 set-alias -name kitty -value C:\Users\Mike\Dropbox\Utilities\kitty_portable-0.70.0.9.exe
 $Data = "C:\Local\Data"
 $Environment = "$Data\python3.6-environment-windows.yml"
-$Repo = "E:\Repo\Doyle"
+$Repo = "C:\Local\Data\Repos\GitHub\Powershell"
 
 function Import-Functions {
     [CmdletBinding()]
@@ -16,7 +16,7 @@ function Import-Functions {
         [Alias("PSPath")]
         [ValidateNotNullOrEmpty()]
         [string[]]
-        $Path = "$Repo\Production\Import-Functions.ps1"
+        $Path = "$Repo\Import-Functions.ps1"
     )
     
     begin {

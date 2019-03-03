@@ -106,7 +106,7 @@ function Backup-Files {
 
 
 Function Get-TimeStamp {
-    $timestamp = get-date -Format yyyy-MM-dd-HH-mm
+    $timestamp = get-date -Format yyyy-MM-dd_HH-mm
     $timestamp
 }
 
@@ -138,7 +138,7 @@ function Global:Set-Profile {
         [Alias("PSPath")]
         [ValidateNotNullOrEmpty()]
         [string[]]
-        $Path = "$Repo\Production\Profiles\Profile.ps1"
+        $Path = "$Repo\Profiles\Profile.ps1"
     )
     
     begin {
